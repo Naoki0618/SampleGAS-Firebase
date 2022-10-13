@@ -81,7 +81,6 @@ function getDocs() {
 
 // function requestProject(){
 function requestProject(projectId, mailAddress){
-  let sheet = SpreadsheetApp.getActive().getActiveSheet();
      
   var today = new Date();
   projectId = projectId.slice(7,13)
@@ -95,21 +94,16 @@ function requestProject(projectId, mailAddress){
   }
 
   firestore.createDocument("WorkshopRequest", data,);
-  sheet.getRange("A5").setValue(projectId);
-  sheet.getRange("A6").setValue(mailAddress);
   let doc = getDoc(projectId)
   let count = Number(doc.fields['参加数']['integerValue']) + 1;
   setDoc(projectId, count)
 };
 
 function dispIndex(){
-  let sheet = SpreadsheetApp.getActive().getActiveSheet();
 
-  sheet.getRange("A7").setValue("1");
   const page = "index";
 
   let template = HtmlService.createTemplateFromFile(page);
-  sheet.getRange("A7").setValue("2");
   return template
     .evaluate()
     .setTitle("ワークショップ")
