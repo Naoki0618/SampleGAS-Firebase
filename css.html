@@ -1,0 +1,270 @@
+<style>
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    border-bottom: 5px solid #ccc;
+    position: relative;
+  }
+
+  nav ul {
+    position: absolute;
+    left: 10%;
+    display: table;
+    margin: 0 auto;
+    padding: 0px;
+    width: 80%;
+    text-align: center;
+  }
+
+  /* トップページ */
+  #ike {
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+
+  /* ナビメニュー START */
+  nav ul li {
+    display: table-cell;
+    min-width: 80px;
+  }
+
+  nav ul li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    text-decoration: none;
+    color: #aaa;
+  }
+
+  nav ul li.current {
+    font-weight: bold;
+    border-top: 5px solid #00B0F0;
+  }
+
+  nav ul li.current a {
+    color: #00B0F0;
+  }
+
+  nav ul li a:hover {
+    color: #0089BB;
+    background-color: #FBFBDD;
+  }
+
+  nav ul li:hover {
+    border-top: 5px solid #F8E750;
+  }
+
+  /* ワークショップ一覧 START*/
+  .box {
+    position: fixed;
+  }
+
+  .box nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+  }
+
+  .box nav .login-item {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    font-size: 20px;
+  }
+
+  @media (min-width: 800px) {
+    .box p {
+      position: absolute;
+      top: 150px;
+      left: 150px;
+      font-size: 60px;
+      font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Meiryo",
+        sans-serif;
+    }
+
+    #ike2 {
+      top: 250px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .box p {
+      position: absolute;
+      top: 150px;
+      left: 30px;
+      font-size: 60px;
+      font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        "Meiryo",
+        sans-serif;
+    }
+
+    #ike2 {
+      top: 400px;
+    }
+  }
+
+  .head-worklist {
+    margin: 0;
+    /* デフォルトCSS打ち消し */
+    font-size: 24px;
+    /* 文字サイズ指定 */
+    position: relative;
+    /* 位置調整 */
+    font-weight: normal;
+    /* 文字の太さ調整 */
+    margin-bottom: 15px;
+    /* 周りの余白指定 */
+    padding-top: 50px;
+    /* 余白指定 */
+    padding-left: 40px;
+    /* 余白指定 */
+  }
+
+  .head-worklist:before {
+    content: '';
+    /* 空白の要素を作る */
+    width: 0;
+    /* 幅指定 */
+    height: 0;
+    /* 高さ指定 */
+    border-style: solid;
+    /* 三角を作る */
+    border-width: 0px 0 110px 80px;
+    /* 三角を作る */
+    border-color: transparent transparent #a3d0e4 transparent;
+    /* 三角を作る */
+    position: absolute;
+    /* 位置調整 */
+    z-index: -1;
+    /* 重なり調整 */
+    transform: rotate(30deg);
+    /* 回転 */
+    top: -20px;
+    /* 位置調整 */
+    left: 40px;
+    /* 位置調整 */
+  }
+
+  .request_row{
+    margin-top: 15px;
+  }
+
+  .workcards {
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:flex;
+    -webkit-box-lines:multiple;
+    -moz-box-lines:multiple;
+    -webkit-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
+    padding-top: 30px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media (min-width: 800px) {
+    .contents {
+      padding: 0px 60px;
+      padding-top: 50px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .contents {
+      padding: 0px 10px;
+      padding-top: 50px;
+    }
+
+    .workcard {
+      width: 100%;
+    }
+
+    .workcards {
+      padding: 25px 10px;
+    }
+
+    .head-worklist {
+      padding-left: 15px;
+      /* 余白指定 */
+    }
+  }
+
+  .contents-header {
+    text-align: center;
+  }
+
+  .workcard {
+    flex: 0 0 33%;
+    text-align: center;
+    border: 1px solid #eee;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    margin: 0 auto 3em;
+  }
+
+  .workcard h3 {
+    background: #A2BC64;
+    color: #fff;
+    padding: 10px;
+    margin: 0;
+  }
+
+  .workcard h4 {
+    font-size: 300%;
+    margin: 0 auto;
+    padding: 1rem 0 0;
+  }
+
+  .workcard p {
+    margin: 0;
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .workcard a {
+    padding: 10px 40px;
+    background: #fb5859;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  @media screen and (max-width: 600px) {
+
+    .profile_card,
+    .workcards,
+    .profile_cards {
+      flex-direction: column;
+      -webkit-flex-direction: column;
+    }
+
+    .workcard,
+    .card_photo {
+      flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+    }
+
+  }
+
+  /* ワークショップ一覧 END*/
+</style>

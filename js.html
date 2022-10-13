@@ -1,0 +1,91 @@
+<script>
+
+  // 開催申込
+  function createRequest(data) {
+  
+    var state = document.getElementById('state').innerHTML;
+    var position = state.indexOf(")")-state.indexOf(":")-2
+    var email = state.substr( 13, position );
+    if(undefined==state || "未ログイン"==state || ""==state){
+        Swal.fire({
+            type: 'warning',
+            title: 'ログインしてから申請してください。',
+            html: ' '
+        });
+    }else{
+        var tanto = document.getElementById('tanto').value;
+        var nWork = document.getElementById('nWork').value;
+        var contents = document.getElementById('contents').value;
+        var hDay = document.getElementById('hDay').value;
+        var sTime = document.getElementById('sTime').value;
+        var fTime = document.getElementById('fTime').value;
+        var count = document.getElementById('count').value;
+    
+        var li = {};
+        li = { tanto: tanto, email: email, nWork: nWork, contents: contents, hDay: hDay, sTime: sTime, fTime: fTime, count: count }
+
+        // google.script.run.createRequest(li);
+        Swal.fire({
+            title: nWork,
+            text: "登録してもよろしいですか",
+            // input: "text",
+            confirmButtonText: '送信',
+            allowOutsideClick: false
+            , showCancelButton: true
+            , cancelButtonText: 'やめる'
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    type: 'success',
+                    title: '送信は成功しました',
+                    html: ' 送信内容：' + nWork
+                });
+                google.script.run.createRequest(li);
+            }
+        });
+
+        document.getElementById('tanto').value = "";
+        document.getElementById('email').value = "";
+        document.getElementById('nWork').value = "";
+        document.getElementById('contents').value = "";
+        document.getElementById('hDay').value = "";
+        document.getElementById('sTime').value = "";
+        document.getElementById('fTime').value = "";
+        document.getElementById('count').value = "";
+    }
+}
+
+// 参加申し込み
+function joinRequest(data) {
+
+    var state = document.getElementById('state').innerHTML;
+    var position = state.indexOf(")")-state.indexOf(":")-2
+    var email = state.substr( 13, position );
+    if(undefined==state || "未ログイン"==state || ""==state){
+        Swal.fire({
+            type: 'warning',
+            title: 'ログインしてから申請してください。',
+            html: ' '
+        });
+    }else{
+        var projectId = data.innerText;
+        // google.script.run.requestProject(li);
+        Swal.fire({
+            title: '参加申込アドレス：' + email,
+            confirmButtonText: '送信',
+            allowOutsideClick: false
+            , showCancelButton: true
+            , cancelButtonText: 'やめる'
+        }).then(function (result) {
+            if (result.value) {
+                Swal.fire({
+                    type: 'success',
+                    title: '送信は成功しました',
+                    html: ' 送信内容：' + email
+                });
+                google.script.run.requestProject(projectId, email);
+            }
+        });
+    }
+}
+</script>
