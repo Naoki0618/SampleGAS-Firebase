@@ -15,14 +15,14 @@
 
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
   <script src="https://kit.fontawesome.com/004d1bfd3c.js" crossorigin="anonymous"></script>
-  <title>IKEDEN WORKSHOP</title>
-  <?!= HtmlService.createHtmlOutputFromFile('firebase-auth').getContent(); ?>
 
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase-auth.js"></script>
   <script src="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.js"></script>
   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.5.1/firebaseui.css" />
   <?!= HtmlService.createHtmlOutputFromFile('firebase-auth').getContent(); ?>
+
+  <title>WORKSHOP</title>
 </head>
 
 <!-- Modal -->
@@ -57,24 +57,24 @@
     <!-- <img class="d-none d-sm-block" id="ike" src="image/ike-top.jpg" alt=""> -->
     <img class="d-none d-sm-block" id="ike" src="https://drive.google.com/uc?export=view&id=1qzwPDC_rZltiZUHZNmkZDnEeEJnpXnXN">
     <nav>
-      <ul style="display:flex;">
+      <ul style="display:flex; width:100vw">
         <div class="col">
           <li class="current"><a
-              href="https://script.google.com/a/macros/ikeden.com/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=index.html">HOME</a>
+              href="https://script.google.com/macros/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=index.html">HOME</a>
           </li>
           <li><a
-              href="https://script.google.com/a/macros/ikeden.com/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=works.html">WORKS</a>
+              href="https://script.google.com/macros/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=works.html">WORKS</a>
           </li>
           <li><a
-              href="https://script.google.com/a/macros/ikeden.com/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=owner.html">OWNER</a>
+              href="https://script.google.com/macros/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec?p=owner.html">OWNER</a>
           </li>
         </div>
+        <div class="col login-item" style="padding: 10px; text-align: end;">
+          <!-- <input type="text" id="email" style="" placeholder="email" /> -->
+          <!-- Button trigger modal -->
+          <button id="login_key" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">　</button>
+        </div>
       </ul>
-      <div class="col login-item" style="padding: 10px; text-align: end;">
-        <!-- <input type="text" id="email" style="" placeholder="email" /> -->
-        <!-- Button trigger modal -->
-        <button type="button" id="login_key" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class='fa-solid fa-right-to-bracket'></i></button>
-      </div>
     </nav>
 
     <p id="ike1">〇〇を作るのは。</p>

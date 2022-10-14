@@ -6,7 +6,7 @@ var firestore = FirestoreApp.getFirestore(dateArray.email, dateArray.key, dateAr
 function firestoreIni() {
   var dateArray = {
     'email': "firebase-adminsdk-9epof@workshop-23257.iam.gserviceaccount.com",
-    'key': "-----BEGIN PRIVATE KEY-----\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==\n-----END PRIVATE KEY-----\n",
+    'key': "-----BEGIN PRIVATE KEY-----\AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==\n-----END PRIVATE KEY-----\n",
     'projectId': 'workshop-23257'
   }
   return dateArray;
@@ -87,9 +87,7 @@ function requestProject(projectId, mailAddress){
 
   const data = {
     "プロジェクトID": projectId,
-    // "プロジェクトID": "000010",
     "登録日": today,
-    // "メールアドレス": "naoki@ikeden.com",
     "メールアドレス": mailAddress,
   }
 
