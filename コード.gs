@@ -6,7 +6,7 @@ var firestore = FirestoreApp.getFirestore(dateArray.email, dateArray.key, dateAr
 function firestoreIni() {
   var dateArray = {
     'email': "firebase-adminsdk-9epof@workshop-23257.iam.gserviceaccount.com",
-    'key': "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==\n-----END PRIVATE KEY-----\n",
+    'key': "-----BEGIN PRIVATE KEY-----\XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==\n-----END PRIVATE KEY-----\n",
     'projectId': 'workshop-23257'
   }
   return dateArray;
