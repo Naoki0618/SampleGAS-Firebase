@@ -1,4 +1,4 @@
-# Sample(GAS+Firebase)
+# Workshop_Gas-Firebase
 Google Apps Scriptを利用したWebアプリケーションです。<br>
 クラウドベースであるためPCやスマホなどからアクセスが可能です。<br>
 企業内部の活性化を図るためのプラットフォームとして活用します。
