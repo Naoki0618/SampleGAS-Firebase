@@ -3,6 +3,9 @@ Google Apps Scriptを利用したWebアプリケーションです。<br>
 クラウドベースであるためPCやスマホなどからアクセスが可能です。<br>
 企業内部の活性化を図るためのプラットフォームとして活用します。
 
+## Demo
+![画像の説明](image.png "demo")
+
 ## Dependency
 GAS、HTML、CSS、JavaScript、Firebase<br>
 GASでWebアプリを構築する際は、すべてのファイルの拡張子が「HTML」となっています。<br>
@@ -17,4 +20,4 @@ Googleアカウントが必要です。<br>
 <a href="https://script.google.com/macros/s/AKfycbwWy7Iynzb_gMSLQPv2mv9PGdwexz6xH-NYf0sKCrfl8DkRNuZcyyDT343ikA5Lwihi/exec">サンプルサイト</a><br>
 
 ## Authors
-Naoki Honda
+naoki0618
