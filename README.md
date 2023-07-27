@@ -1,4 +1,4 @@
-# Workshop_Gas-Firebase
+# GoogleAppscriptを使用したWEBアプリ
 Google Apps Scriptを利用したWebアプリケーションです。<br>
 クラウドベースであるためPCやスマホなどからアクセスが可能です。<br>
 企業内部の活性化を図るためのプラットフォームとして活用します。
